@@ -1,0 +1,125 @@
+body {
+  background-color: #eeeeee;
+}
+
+.sub-title {
+  color: #534e52;
+}
+
+a {
+  color: #af6b58;
+}
+
+div img {
+  width: 30%;
+  height: 30%;
+}
+
+/* Header */
+.navbar {
+  padding-top: 0;
+}
+
+#subscribe {
+  text-decoration: underline;
+  color: #d37815;
+}
+
+#blog-name {
+  font-size: 10vw;
+  color: #ffd369;
+}
+
+#search {
+  width: 2%;
+  height: 2%;
+}
+
+/* Home */
+.grid-container {
+  display: grid;
+  grid-template-columns: 70vw auto;
+  grid-gap: 1%;
+  padding: 5%;
+}
+
+.card {
+  margin: 1rem;
+  padding: 1rem;
+  border: #c7956d 0.3vw;
+  border-style: dashed;
+  margin-bottom: 1rem;
+}
+
+.summary {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 50vw;
+}
+
+.read-more {
+  text-decoration: underline;
+}
+
+.about-me {
+  border: solid black;
+  padding: 5%;
+  text-align: justify;
+}
+
+.about-text {
+  color: #8f384d;
+}
+
+/* Posts */
+.post-time {
+  color: #a6a9b6;
+  font: 0.5rem;
+  font-style: italic;
+}
+
+.part {
+  margin: 4%;
+}
+
+.first-img {
+  float: left;
+  margin-right: 5%;
+  margin-bottom: 1rem;
+  z-index: -1;
+}
+
+.second-img {
+  float: right;
+  margin-left: 5%;
+}
+
+.first-img:hover , .second-img:hover{
+  opacity: 0.5;
+}
+
+.quote {
+  margin: 0 10%;
+  color: #a6a9b6;
+}
+
+.side-section {
+  margin: 2vw 1vw;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .grid-container {
+    grid-template-columns: 70vw 20vw;
+  }
+
+  body, html {
+    font-size: 0.5rem;
+  }
+}
