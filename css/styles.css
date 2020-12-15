@@ -15,9 +15,16 @@ div img {
   height: 30%;
 }
 
+.page-container {
+  position: relative;
+
+}
 /* Header */
 .navbar {
-  padding-top: 0;
+  display: grid;
+  grid-template-columns: 40vw auto 4vw ;
+  background-color: #393e46;
+  height: 85%;
 }
 
 #subscribe {
@@ -26,13 +33,15 @@ div img {
 }
 
 #blog-name {
-  font-size: 10vw;
+  font-size: 2rem;
   color: #ffd369;
 }
 
 #search {
-  width: 2%;
-  height: 2%;
+  width: 3vw;
+  height: 3vw;
+  position: relative;
+  top: 30%;
 }
 
 /* Home */
@@ -49,24 +58,24 @@ div img {
   border: #c7956d 0.3vw;
   border-style: dashed;
   margin-bottom: 1rem;
+
+}
+
+.card:hover {
+  background-color: #ffe5b9;
 }
 
 .summary {
   display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 50vw;
-}
-
-.read-more {
-  text-decoration: underline;
+  word-break: break-all;
 }
 
 .about-me {
   border: solid black;
   padding: 5%;
   text-align: justify;
+  margin-bottom: 5vh;
 }
 
 .about-text {
@@ -78,6 +87,10 @@ div img {
   color: #a6a9b6;
   font: 0.5rem;
   font-style: italic;
+}
+
+.full-post {
+  margin-bottom: 5%;
 }
 
 .part {
@@ -109,17 +122,72 @@ div img {
   margin: 2vw 1vw;
 }
 
-/* Footer */
-footer {
-  text-align: center;
+.old-new {
+ text-align: center;
 }
 
+
+/* Footer */
+footer {
+  position: absolute;
+  /* bottom: 0; */
+  left: 42%;
+}
+
+.sub-mobile {
+ visibility: hidden;
+}
+
+.redirect {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+
 @media (max-width: 500px) {
-  .grid-container {
-    grid-template-columns: 70vw 20vw;
+  #subscribe {
+    display: none;
   }
 
-  body, html {
-    font-size: 0.5rem;
+  #blog-name {
+    font-size: 1.5rem;
+  }
+
+  #search {
+    width: 5vw;
+    height: 5vw;
+  }
+
+  .navbar{
+    grid-template-columns: auto 5vw;
+  }
+
+  .card {
+    min-height: 20vh;
+  }
+
+
+  .grid-container {
+    display: inline-block;
+  }
+
+  .summary {
+    max-width: 70vw;
+    word-wrap: break-word;
+  }
+
+  .sub-mobile {
+    visibility: visible;
+    text-align: center;
+
+  }
+
+  .redirect {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+
+  footer {
+    left: 30%;
   }
 }
